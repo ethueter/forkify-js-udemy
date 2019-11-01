@@ -1,10 +1,55 @@
 
-const frequencies = (arr) => {
-    return arr.reduce((obj, el) => {
-        obj[el] ? ++obj[el] : obj[el] = 1;
-        return obj
-    }, {})
-}
+// Fibonacci Challenge
+
+const fib = (num) => {
+    let arr = [0, 1];
+
+    for(let i = 2; i <= num; i++){
+        let res1 = arr[i - 1];
+        let res2 = arr[i - 2];
+        arr.push(res1 + res2);
+    }
+    return arr[num]
+};
+
+
+const fibRec = (num) => {
+    if (num < 2) {
+        return num
+    };
+    return fibRec(num - 1) + fibRec(num - 2)
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const frequencies = (arr) => {
+//     return arr.reduce((obj, el) => {
+//         obj[el] ? ++obj[el] : obj[el] = 1;
+//         return obj
+//     }, {})
+// }
 
 
 
